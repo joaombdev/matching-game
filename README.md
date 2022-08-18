@@ -43,7 +43,6 @@ Repo: <a href=""></a>
 
 Repos
 
-<br><br>
 <a href="https://github.com/soaresderik/jogo-memoria">Andre Soares</a>
 <br><br>
 <a href="https://github.com/ironhack-labs/lab-javascript-memory-game">Ironhack Labs</a>
