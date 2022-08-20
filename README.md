@@ -33,9 +33,9 @@ Repo: <a href="https://github.com/omariosouto/flappy-bird-devsoutinho"></a>
 <br><br>
 
 
-<a href="">Lorem ipsum</a>
+<a href="https://www.youtube.com/watch?v=P9cSVCGj0I0">Menu Responsivo | HTML, CSS e JAVASCRIPT</a>
 <br>
-Repo: <a href=""></a>
+Repo: <a href="https://github.com/Larissakich/menu_responsivo">menu_responsivo</a>
 
 
 <hr>
