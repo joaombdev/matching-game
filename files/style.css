@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Silkscreen', cursive;
+}
+
+body {
+    background-color: #202020;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-header {
+    background-color: #FFF;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-header img {
+    width: 300px;
+}
+
+.login-title {
+    padding: 20px;
+    background-color: #FFF;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.login-input {
+    border: 2px solid #000;
+    border-radius: 10px;
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+.login-button {
+    font-size: 1em;
+    color: #000;
+    background-color: #FFDA34;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.login-button:hover {
+    background-color: #f6c900;
+}
+
+.login-button:disabled {
+    background-color: #989898;
+    color: #AAA;
+    cursor: auto;
+}
+
+/* A PARTIR DAQUI É O ESTILO PARA A PÁGINA DO JOGO */
+/* THE GAME PAGE STYLING STARTS HERE */
+
+#body-game {
+    background-color: #0040C1;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    margin: auto;
+    padding: 20px 20px 60px;
+    width: 100%;
+    max-width: 800px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-color: #FFDA34;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container {
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    aspect-ratio: 3/4;
+    border-radius: 8px;
+    width: 100%;
+    background-color: #FFF;
+    position: relative;
+    transition: all 300ms ease;
+    transform-style: preserve-3d;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #181818;
+    border-radius: 5px;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    transition: all 400ms ease;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+.back-face {
+    background-image: url('../images/card.svg');
+    backface-visibility: hidden;
+}
+
+.reveal-card {
+    transform: rotateY(180deg);
+}
+
+.disabled-card {
+    filter: saturate(0);
+    opacity: 0.5;
+}
+
+footer {
+    min-width: 100%;
+    height: 200px;
+}
