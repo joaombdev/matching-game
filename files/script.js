@@ -1,6 +1,18 @@
+/*
+    Some things I couldn't do:
+    - the click counter
+    - a better alert that show the player name and the time
+        I tried:
+        - alert(`Parabéns, ${Player.innerHTML}! Seu tempo foi de: ${timer.innerHTML}`);
+        - alert('Parabéns ' + player + '! Seu tempo foi de: ' + timer);
+*/
+
 const container = document.querySelector('.container');
 const Player = document.querySelector('.player');
 const timer = document.querySelector('.timer');
+const score = document.querySelector('.score');
+let ponto;
+const clicks = document.querySelector('.clicks');
 
 const languages = [
     'css',
@@ -24,9 +36,11 @@ let secondCard = '';
 
 const checkEndGame = () => {
     const disabledCards = document.querySelectorAll('.disabled-card');
-    if (disabledCards.length === 20) {
+    if (disabledCards.length === 16) {
         clearInterval(this.loop);
-        alert('Meus parabéns, você venceu o jogo!');
+        setTimeout(function () {
+            alert('Meus parabéns, você venceu o jogo!');
+        }, 200);
     }
 }
 
@@ -40,6 +54,9 @@ const checkCards = () => {
 
         firstCard = '';
         secondCard = '';
+
+        ponto++;
+        score.innerHTML = ponto;
 
         checkEndGame();
     } else {
@@ -94,20 +111,25 @@ const loadGame = () => {
     duplicateLanguages.forEach((language) => {
         const card = createCard(language);
         container.appendChild(card);
-    })
+    });
+
+    ponto = 0;
+    score.innerHTML = ponto;
 }
 
 const startTimer = () => {
     this.loop = setInterval(() => {
         const currentTimer = +timer.innerHTML;
         timer.innerHTML = currentTimer + 1;
-    }, 1000);
+    }, 1200);
 }
 
 window.onload = () => {
     Player.innerHTML = localStorage.getItem('player');
 
     startTimer();
+
+    // startClicks();
 
     loadGame();
 }
