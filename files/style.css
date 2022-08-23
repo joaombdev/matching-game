@@ -106,6 +106,10 @@ header {
     justify-content: space-around;
 }
 
+.clicks-text {
+    color: grey;
+}
+
 .container {
     margin: 1rem auto;
     width: 100%;
