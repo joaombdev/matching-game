@@ -106,8 +106,8 @@ header {
     justify-content: space-around;
 }
 
-.clicks, .clicks-text {
-    color: gray;
+.clicks-text {
+    color: grey;
 }
 
 .container {
