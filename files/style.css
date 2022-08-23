@@ -76,6 +76,13 @@ body {
 /* A PARTIR DAQUI É O ESTILO PARA A PÁGINA DO JOGO */
 /* THE GAME PAGE STYLING STARTS HERE */
 
+#body-game {
+    background-color: #0040C1;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
 main {
     margin: auto;
     padding: 20px 20px 60px;
@@ -90,7 +97,7 @@ main {
 
 header {
     background-color: #FFDA34;
-    margin: 0 0 20px;
+    margin: 20px 0;
     padding: 10px;
     border-radius: 5px;
     min-width: 100%;
@@ -114,7 +121,7 @@ header {
     width: 100%;
     background-color: #FFF;
     position: relative;
-    transition: all 500ms ease;
+    transition: all 300ms ease;
     transform-style: preserve-3d;
 }
 
@@ -145,4 +152,9 @@ header {
 .disabled-card {
     filter: saturate(0);
     opacity: 0.5;
+}
+
+footer {
+    min-width: 100%;
+    height: 200px;
 }
